@@ -2,34 +2,13 @@ import typer
 from rich import print
 from rich.prompt import Prompt
 
+# import all CLI command functions
+from utils.cost_optimization_recommendations import cost_optimization_recommendations
+from utils.export_reports import export_reports
+from utils.project_profile_extraction import project_profile_extraction
+from utils.synthetic_billing_generation import synthetic_billing_generation
+
 app = typer.Typer()
-
-# 1. Extracts the structured project profile from CLI and write into project_description.txt file
-@app.command()
-def project_profile_extraction():
-    desc = Prompt.ask("Enter the project description here")
-    try:
-        with open("project_description.txt", "a", encoding='utf-8') as f:
-            f.write(desc)
-            f.write("\n\n")
-        print(f"[bold green]The project description has been successfully written into file![/bold green]")
-    except Exception as e:
-        print("\n[bold red]THE PROJECT DESCRIPTION COULD NOT BE EXTRACTED![/bold red]\n", e)
-
-# 2. Generates realistic, budget-aware synthetic cloud-billing
-@app.command()
-def synthetic_billing_generation():
-    print("Generating synthetic bill...")
-
-# 3. Produces actionable cost optimization recommendations
-@app.command()
-def cost_optimization_recommendations():
-    print("Recommending...")
-
-# 4. Exports Reports
-@app.command()
-def export_reports():
-    print("Exporting reports...")
 
 @app.callback(invoke_without_command=True)
 def main():
