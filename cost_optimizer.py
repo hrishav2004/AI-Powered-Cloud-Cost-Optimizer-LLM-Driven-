@@ -26,6 +26,10 @@ def main():
             cost_optimization_recommendations()
         else:
             export_reports()
+    # Catches exceptions, when the project_description.txt file doesn't exist
+    except FileNotFoundError as e:
+        print("\n[bold red]There doesn't exist any project_description.txt file![/bold red]\n")
+        main()
     # Catches exceptions, when the user enters a value other than 1,2,3,4 or some other invalid/non-numeric string
     except Exception as e:
         print(f"\n[bold red]PLEASE ENTER A VALID CHOICE BETWEEN 1-4![/bold red]\n")
