@@ -3,10 +3,10 @@ from rich import print
 from rich.prompt import Prompt
 
 # import all CLI command functions
+from utils.get_project_description import get_project_description
+from utils.run_cost_analysis import run_cost_analysis
 from utils.cost_optimization_recommendations import cost_optimization_recommendations
 from utils.export_reports import export_reports
-from utils.project_profile_extraction import project_profile_extraction
-from utils.synthetic_billing_generation import synthetic_billing_generation
 
 app = typer.Typer()
 
@@ -19,9 +19,9 @@ def main():
         if choice not in [1,2,3,4]:
             raise Exception
         if choice == 1:
-            project_profile_extraction()
+            get_project_description()
         elif choice == 2:
-            synthetic_billing_generation()
+            run_cost_analysis()
         elif choice == 3:
             cost_optimization_recommendations()
         else:
