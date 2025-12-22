@@ -1,8 +1,4 @@
-import os
-import requests
-from dotenv import load_dotenv
-
-load_dotenv()
+from utils.LLMCalls.llm_client import llm_client
 
 def generate_project_profile():
     # Read the prompt for LLM call
@@ -16,30 +12,7 @@ def generate_project_profile():
         description = f.read()
 
     try:
-        API_URL = "https://router.huggingface.co/v1/chat/completions"
-        headers = {
-            "Authorization": f"Bearer {os.environ['HF_TOKEN']}",
-        }
-
-        def query(payload):
-            response = requests.post(API_URL, headers=headers, json=payload)
-            return response.json()
-
-        response = query({
-            "messages": [
-                {
-                    "role": "user",
-                    "content": prompt+description
-                }
-            ],
-            "model": "meta-llama/Llama-3.1-8B-Instruct:novita",
-            "parameters": {
-                "temperature": 0.0,
-                "max_tokens": 512
-             }
-        })
-
-        project_profile = response["choices"][0]["message"]["content"]
+        project_profile = llm_client(prompt+description)
 
         # validate json - to be done later
 
