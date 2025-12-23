@@ -12,21 +12,26 @@ app = typer.Typer()
 
 @app.callback(invoke_without_command=True)
 def main():
-    print("""1. Enter a new project description:memo:\n2. Run Complete Cost Analysis:chart_with_upwards_trend::dollar:\n3. View Recommendations:bulb:\n4. Export Report:outbox_tray:""")
-    choice = Prompt.ask("Choose the action you want to perform (1-4)")
+    print("""1. Enter a new project description:memo:\n2. Run Complete Cost Analysis:chart_with_upwards_trend::dollar:\n3. View Recommendations:bulb:\n4. Export Report:outbox_tray:\n5. Exit:door:🏃""")
+    choice = Prompt.ask("Choose the action you want to perform (1-5)")
     try:
         choice = int(choice)
-        if choice not in [1,2,3,4]:
+        if choice not in [1,2,3,4,5]:
             raise Exception
         if choice == 1:
             get_project_description()
+            main()
         elif choice == 2:
             run_cost_analysis()
+            main()
         elif choice == 3:
             cost_optimization_recommendations()
             main()
-        else:
+        elif choice == 4:
             export_reports()
+            main()
+        else:
+            pass
     # Catches exceptions, when the project_description.txt file doesn't exist
     except FileNotFoundError as e:
         print("\n[bold red]There doesn't exist any project_description.txt file![/bold red]\n")
