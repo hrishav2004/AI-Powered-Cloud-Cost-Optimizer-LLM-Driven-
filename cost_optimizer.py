@@ -24,6 +24,7 @@ def main():
             run_cost_analysis()
         elif choice == 3:
             cost_optimization_recommendations()
+            main()
         else:
             export_reports()
     # Catches exceptions, when the project_description.txt file doesn't exist
