@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["name","budget_inr_per_month","description","tech_stack","non_functional_requirements"],
+  "properties": {
+    "name": {
+        "type": ["string","null"]
+    },
+    "budget_inr_per_month": {
+        "type": ["number","null"],
+        "minimum": 0
+    },
+    "description": {
+        "type": ["string","null"]
+    },
+    "tech_stack": {
+      "type": "object",
+      "required": ["backend","database","storage","monitoring","analytics"],
+      "properties": {
+        "backend": {
+            "type": ["string","null"]
+        },
+        "database": {
+            "type": ["string","null"]
+        },
+        "storage": {
+            "type": ["string","null"]
+        },
+        "monitoring": {
+            "type": ["string","null"]
+        },
+        "analytics": {
+            "type": ["string","null"]
+        }
+      }
+    },
+    "non_functional_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+        }
+    }
+  },
+  "additionalProperties": true
+}

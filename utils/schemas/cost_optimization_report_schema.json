@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cost Optimization Report Schema",
+  "type": "object",
+  "required": ["project_name", "analysis", "recommendations", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "analysis": {
+      "type": "object",
+      "required": [
+        "total_monthly_cost",
+        "budget",
+        "budget_variance",
+        "service_costs",
+        "high_cost_services",
+        "is_over_budget"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_monthly_cost": {
+          "type": "number",
+          "minimum": 0
+        },
+        "budget": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "budget_variance": {
+          "type": ["number", "null"]
+        },
+        "service_costs": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "high_cost_services": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "is_over_budget": {
+          "type": "boolean"
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "service",
+          "current_cost",
+          "potential_savings",
+          "recommendation_type",
+          "description",
+          "implementation_effort",
+          "risk_level",
+          "steps",
+          "cloud_providers"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5
+          },
+          "service": {
+            "type": "string",
+            "minLength": 1
+          },
+          "current_cost": {
+            "type": "number",
+            "minimum": 0
+          },
+          "potential_savings": {
+            "type": "number",
+            "minimum": 0
+          },
+          "recommendation_type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 600
+          },
+          "implementation_effort": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 5
+            }
+          },
+          "cloud_providers": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_potential_savings",
+        "savings_percentage",
+        "recommendations_count",
+        "high_impact_recommendations"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_potential_savings": {
+          "type": "number",
+          "minimum": 0
+        },
+        "savings_percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "recommendations_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "high_impact_recommendations": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

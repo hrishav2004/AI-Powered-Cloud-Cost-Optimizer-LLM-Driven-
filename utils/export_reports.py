@@ -98,7 +98,7 @@ def export_reports():
         providers = providers[0:-2]
         pdf.add_page()
         pdf.set_font("Times", style="BU", size=25)
-        pdf.cell(0, 20, f"{title}", new_x="LMARGIN", new_y="NEXT", align="C")
+        pdf.multi_cell(0, 10, f"{title}", new_x="LMARGIN", new_y="NEXT", align="C")
         pdf.set_font("Times", style="", size=20)
         pdf.write_html(f"""
             <p>Optimization in terms of <b>{service}</b>.</p>
@@ -108,7 +108,7 @@ def export_reports():
             <u>Steps of implementation:</u>
         """)
         for i in range(0, len(steps)):
-            pdf.cell(0, 10, f"{i+1}. {steps[i]}", new_x="LMARGIN", new_y="NEXT")
+            pdf.multi_cell(0, 10, f"{i+1}. {steps[i]}", new_x="LMARGIN", new_y="NEXT")
         
         pdf.write_html(f"""
             <p><u>Cloud Providers</u>: {providers}</p>
@@ -120,7 +120,7 @@ def export_reports():
     pot_savings = df["Potential Savings"]
     proj_cost = curr_cost-pot_savings
     title = df["Title"]
-    plt.figure(figsize=(15,5))
+    plt.figure(figsize=(18,5))
     plt.barh(title, curr_cost, label="Current Cost")
     plt.barh(title, proj_cost, label="Projected Cost (After Savings)")
     plt.title("Cost Impact per Recommendation")

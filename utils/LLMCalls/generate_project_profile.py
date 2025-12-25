@@ -1,3 +1,5 @@
+import json, jsonschema
+from jsonschema import validate
 from utils.LLMCalls.llm_client import llm_client
 
 def generate_project_profile():
@@ -11,14 +13,15 @@ def generate_project_profile():
     with open("pipeline_output/project_description.txt", "r", encoding='utf-8') as f:
         description = f.read()
 
-    try:
-        project_profile = llm_client(prompt+description)
+    # Read schema for project profile
+    with open("utils/schemas/project_profile_schema.json", "r", encoding='utf-8') as f:
+        profile_schema = json.load(f)
 
-        # validate json - to be done later
+    project_profile = llm_client(prompt+description)
+    # Validate schema
+    validate(instance=json.loads(project_profile), schema=profile_schema)
 
-        # Write the output of LLM to project_profile.json
-        with open("pipeline_output/project_profile.json", "w", encoding='utf-8') as f:
-            f.write(project_profile)
 
-    except Exception as e:
-        print(e)
+    # Write the output of LLM to project_profile.json
+    with open("pipeline_output/project_profile.json", "w", encoding='utf-8') as f:
+        f.write(project_profile)

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["billing_records","billing_summary"],
+  "properties": {
+    "billing_records": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["month","service","resource_id","region","usage_type","usage_quantity","unit","cost_inr","desc"],
+        "properties": {
+          "month": {"type":"string"},
+          "service": {"type":"string"},
+          "resource_id": {"type":"string"},
+          "region": {"type":["string","null"]},
+          "usage_type": {"type":["string","null"]},
+          "usage_quantity": {"type":"number","minimum":0},
+          "unit": {"type":"string"},
+          "cost_inr": {"type":"number","minimum":0},
+          "desc": {"type":"string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "billing_summary": {
+      "type": "object",
+      "required": ["budget_inr","total_cost_inr","percent_of_budget","top_3_services_by_cost"],
+      "properties": {
+        "budget_inr": {"type":["number","null"]},
+        "total_cost_inr": {"type":"number"},
+        "percent_of_budget": {"type":["number","null"]},
+        "top_3_services_by_cost": {
+          "type":"array",
+          "items":{"type":"string"},
+          "minItems":3,
+          "maxItems":3
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
