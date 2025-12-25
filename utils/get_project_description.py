@@ -6,7 +6,7 @@ from rich.prompt import Prompt
 def get_project_description():
     desc = Prompt.ask("Enter the project description here")
     try:
-        with open("project_description.txt", "w", encoding='utf-8') as f:
+        with open("pipeline_output/project_description.txt", "w", encoding='utf-8') as f:
             f.write(desc)
         print(f"[bold green]The project description has been successfully written into file![/bold green]")
     except Exception as e:

@@ -6,14 +6,14 @@ def generate_mock_billing():
         prompt = f.read()
 
     # Read the project profile
-    with open("project_profile.json", "r", encoding='utf-8') as f:
+    with open("pipeline_output/project_profile.json", "r", encoding='utf-8') as f:
         project_profile = f.read()
 
     try:
         mock_billing = llm_client(prompt+project_profile, 1500)
 
         # Write the output of LLM to mock_billing.json
-        with open("mock_billing.json", "w", encoding='utf-8') as f:
+        with open("pipeline_output/mock_billing.json", "w", encoding='utf-8') as f:
             f.write(mock_billing)
             
     except Exception as e:

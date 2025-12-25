@@ -7,7 +7,7 @@ from rich import print
 def export_reports():
     print("Exporting report...")
 
-    with open("cost_optimization_report.json", "r", encoding='utf-8') as f:
+    with open("pipeline_output/cost_optimization_report.json", "r", encoding='utf-8') as f:
         report = f.read()
     report = json.loads(report)
     analysis = report["analysis"]

@@ -8,7 +8,7 @@ from utils.displays.low_level import low_level
 # Produces actionable cost optimization recommendations
 def cost_optimization_recommendations():
     # Load the json data from Cost Optimization Report
-    with open("cost_optimization_report.json", "r", encoding='utf-8') as f:
+    with open("pipeline_output/cost_optimization_report.json", "r", encoding='utf-8') as f:
         report = f.read()
     report = json.loads(report)
 

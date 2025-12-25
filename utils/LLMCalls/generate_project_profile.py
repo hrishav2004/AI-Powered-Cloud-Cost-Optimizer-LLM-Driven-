@@ -8,7 +8,7 @@ def generate_project_profile():
         prompt = f.read()
 
     # Read the project description
-    with open("project_description.txt", "r", encoding='utf-8') as f:
+    with open("pipeline_output/project_description.txt", "r", encoding='utf-8') as f:
         description = f.read()
 
     try:
@@ -17,7 +17,7 @@ def generate_project_profile():
         # validate json - to be done later
 
         # Write the output of LLM to project_profile.json
-        with open("project_profile.json", "w", encoding='utf-8') as f:
+        with open("pipeline_output/project_profile.json", "w", encoding='utf-8') as f:
             f.write(project_profile)
 
     except Exception as e:
