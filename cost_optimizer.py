@@ -35,7 +35,7 @@ def main():
             pass
     # Catches exceptions, when the project_description.txt file doesn't exist
     except FileNotFoundError as e:
-        print("\n[bold red]There doesn't exist any project_description.txt file![/bold red]\n")
+        print("\n[bold red]OOPS! It seems that some non-existant file is being accessed.[/bold red]\n")
         main()
     # Catches exceptions when the json schema is not valid
     except jsonschema.exceptions.ValidationError as e:
