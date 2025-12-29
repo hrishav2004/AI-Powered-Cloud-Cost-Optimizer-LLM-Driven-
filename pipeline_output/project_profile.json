@@ -1,0 +1,21 @@
+{
+  "name": "AI-powered Community Platform",
+  "budget_inr_per_month": 40000,
+  "description": "An AI-powered community platform providing a space for Machine Learning enthusiasts to connect, chat, and learn together.",
+  "tech_stack": {
+    "frontend": "Angular",
+    "backend": "Node.js",
+    "database": "MongoDB",
+    "storage": null,
+    "proxy": "Nginx",
+    "hosting": "Azure",
+    "api": "Hugging Face Inference API",
+    "monitoring": null,
+    "analytics": null
+  },
+  "non_functional_requirements": [
+    "Scalability",
+    "Cost efficiency",
+    "Performance"
+  ]
+}

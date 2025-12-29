@@ -1,0 +1,219 @@
+{
+    "project_name": "AI-powered Community Platform",
+    "analysis": {
+        "total_monthly_cost": 10275,
+        "budget": 40000,
+        "budget_variance": 29725,
+        "service_costs": {
+            "Compute": 6240,
+            "Database": 1080,
+            "Storage": 660,
+            "Networking": 2100,
+            "Monitoring": 1500,
+            "Cache": 625,
+            "LoadBalancer": 2500,
+            "Backup": 300,
+            "Logging": 40,
+            "Worker": 210
+        },
+        "high_cost_services": {
+            "Compute": 6240,
+            "Database": 1080,
+            "Networking": 2100
+        },
+        "is_over_budget": false
+    },
+    "recommendations": [
+        {
+            "title": "Migrate to Free Tier Database",
+            "service": "Database",
+            "current_cost": 1080,
+            "potential_savings": 720,
+            "recommendation_type": "free_tier",
+            "description": "Migrate to free tier database to save costs.",
+            "implementation_effort": "low",
+            "risk_level": "low",
+            "steps": [
+                "Check if database usage is within free tier limits.",
+                "Migrate to free tier database if eligible."
+            ],
+            "cloud_providers": [
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "Open-source"
+            ]
+        },
+        {
+            "title": "Rightsizing Compute Instances",
+            "service": "Compute",
+            "current_cost": 6240,
+            "potential_savings": 1560,
+            "recommendation_type": "rightsizing",
+            "description": "Rightsizing compute instances to save costs.",
+            "implementation_effort": "medium",
+            "risk_level": "medium",
+            "steps": [
+                "Review compute instance usage and adjust instance types.",
+                "Implement auto-scaling to adjust instance counts."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Storage Tiering",
+            "service": "Storage",
+            "current_cost": 660,
+            "potential_savings": 110,
+            "recommendation_type": "storage_tier",
+            "description": "Implement storage tiering to save costs.",
+            "implementation_effort": "low",
+            "risk_level": "low",
+            "steps": [
+                "Implement storage tiering by moving less frequently used data to lower-cost storage tiers."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Reserved Instances for Compute",
+            "service": "Compute",
+            "current_cost": 6240,
+            "potential_savings": 624,
+            "recommendation_type": "reserved_instances",
+            "description": "Purchase reserved instances for compute to save costs.",
+            "implementation_effort": "high",
+            "risk_level": "high",
+            "steps": [
+                "Calculate potential savings from reserved instances.",
+                "Purchase reserved instances for compute."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Caching for Database",
+            "service": "Cache",
+            "current_cost": 625,
+            "potential_savings": 125,
+            "recommendation_type": "caching",
+            "description": "Implement caching for database to save costs.",
+            "implementation_effort": "low",
+            "risk_level": "low",
+            "steps": [
+                "Implement caching layer between application and database."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Load Balancer Optimization",
+            "service": "LoadBalancer",
+            "current_cost": 2500,
+            "potential_savings": 500,
+            "recommendation_type": "network_optimization",
+            "description": "Optimize load balancer configuration to save costs.",
+            "implementation_effort": "medium",
+            "risk_level": "medium",
+            "steps": [
+                "Review load balancer configuration and optimize it.",
+                "Implement load balancer auto-scaling."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Migrate to Azure for Compute",
+            "service": "Compute",
+            "current_cost": 6240,
+            "potential_savings": 624,
+            "recommendation_type": "alternative_provider",
+            "description": "Migrate to Azure for compute to save costs.",
+            "implementation_effort": "high",
+            "risk_level": "high",
+            "steps": [
+                "Calculate potential savings from migration.",
+                "Migrate compute to Azure."
+            ],
+            "cloud_providers": [
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Backup Optimization",
+            "service": "Backup",
+            "current_cost": 300,
+            "potential_savings": 60,
+            "recommendation_type": "backup_optimization",
+            "description": "Optimize backup configuration to save costs.",
+            "implementation_effort": "low",
+            "risk_level": "low",
+            "steps": [
+                "Review backup configuration and optimize it.",
+                "Implement backup auto-scaling."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        },
+        {
+            "title": "Reserved Instances for Database",
+            "service": "Database",
+            "current_cost": 1080,
+            "potential_savings": 108,
+            "recommendation_type": "reserved_instances",
+            "description": "Purchase reserved instances for database to save costs.",
+            "implementation_effort": "high",
+            "risk_level": "high",
+            "steps": [
+                "Calculate potential savings from reserved instances.",
+                "Purchase reserved instances for database."
+            ],
+            "cloud_providers": [
+                "AWS",
+                "Azure",
+                "GCP",
+                "DigitalOcean",
+                "On-prem"
+            ]
+        }
+    ],
+    "summary": {
+        "total_potential_savings": 4431,
+        "savings_percentage": 62.1,
+        "recommendations_count": 9,
+        "high_impact_recommendations": 3
+    }
+}

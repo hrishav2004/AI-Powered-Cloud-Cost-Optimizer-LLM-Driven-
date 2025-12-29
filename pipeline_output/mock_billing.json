@@ -1,0 +1,212 @@
+{
+    "billing_records": [
+        {
+            "month": "2025-01",
+            "service": "Compute",
+            "resource_id": "ai-community-web-01",
+            "region": "ap-south-1",
+            "usage_type": "Linux/UNIX(on-demand)",
+            "usage_quantity": 720,
+            "unit": "hours",
+            "cost_inr": 840,
+            "desc": "Frontend web server"
+        },
+        {
+            "month": "2025-01",
+            "service": "Database",
+            "resource_id": "ai-community-db-01",
+            "region": "ap-south-1",
+            "usage_type": "Storage",
+            "usage_quantity": 100,
+            "unit": "GB-month",
+            "cost_inr": 600,
+            "desc": "Database storage"
+        },
+        {
+            "month": "2025-01",
+            "service": "Storage",
+            "resource_id": "ai-community-storage-01",
+            "region": "ap-south-1",
+            "usage_type": "Storage",
+            "usage_quantity": 50,
+            "unit": "GB-month",
+            "cost_inr": 300,
+            "desc": "Media storage"
+        },
+        {
+            "month": "2025-01",
+            "service": "Networking",
+            "resource_id": "ai-community-network-01",
+            "region": "ap-south-1",
+            "usage_type": "GB-egress",
+            "usage_quantity": 2000,
+            "unit": "GB",
+            "cost_inr": 1200,
+            "desc": "Network egress"
+        },
+        {
+            "month": "2025-01",
+            "service": "Monitoring",
+            "resource_id": "ai-community-monitoring-01",
+            "region": "ap-south-1",
+            "usage_type": "Metric data",
+            "usage_quantity": 10000,
+            "unit": "count",
+            "cost_inr": 500,
+            "desc": "Monitoring metrics"
+        },
+        {
+            "month": "2025-01",
+            "service": "Cache",
+            "resource_id": "ai-community-cache-01",
+            "region": "ap-south-1",
+            "usage_type": "Read requests",
+            "usage_quantity": 50000,
+            "unit": "count",
+            "cost_inr": 250,
+            "desc": "Cache read requests"
+        },
+        {
+            "month": "2025-01",
+            "service": "LoadBalancer",
+            "resource_id": "ai-community-loadbalancer-01",
+            "region": "ap-south-1",
+            "usage_type": "requests",
+            "usage_quantity": 10000,
+            "unit": "requests",
+            "cost_inr": 1000,
+            "desc": "Load balancer requests"
+        },
+        {
+            "month": "2025-01",
+            "service": "Backup",
+            "resource_id": "ai-community-backup-01",
+            "region": "ap-south-1",
+            "usage_type": "Storage",
+            "usage_quantity": 20,
+            "unit": "GB-month",
+            "cost_inr": 120,
+            "desc": "Backup storage"
+        },
+        {
+            "month": "2025-01",
+            "service": "Logging",
+            "resource_id": "ai-community-logging-01",
+            "region": "ap-south-1",
+            "usage_type": "GB-egress",
+            "usage_quantity": 100,
+            "unit": "GB",
+            "cost_inr": 40,
+            "desc": "Logging egress"
+        },
+        {
+            "month": "2025-01",
+            "service": "Worker",
+            "resource_id": "ai-community-worker-01",
+            "region": "ap-south-1",
+            "usage_type": "Hours",
+            "usage_quantity": 300,
+            "unit": "hours",
+            "cost_inr": 210,
+            "desc": "Worker node hours"
+        },
+        {
+            "month": "2025-01",
+            "service": "Compute",
+            "resource_id": "ai-community-web-02",
+            "region": "ap-south-1",
+            "usage_type": "Linux/UNIX(on-demand)",
+            "usage_quantity": 600,
+            "unit": "hours",
+            "cost_inr": 420,
+            "desc": "Backend web server"
+        },
+        {
+            "month": "2025-01",
+            "service": "Database",
+            "resource_id": "ai-community-db-02",
+            "region": "ap-south-1",
+            "usage_type": "Storage",
+            "usage_quantity": 80,
+            "unit": "GB-month",
+            "cost_inr": 480,
+            "desc": "Database storage"
+        },
+        {
+            "month": "2025-01",
+            "service": "Storage",
+            "resource_id": "ai-community-storage-02",
+            "region": "ap-south-1",
+            "usage_type": "Storage",
+            "usage_quantity": 60,
+            "unit": "GB-month",
+            "cost_inr": 360,
+            "desc": "Media storage"
+        },
+        {
+            "month": "2025-01",
+            "service": "Networking",
+            "resource_id": "ai-community-network-02",
+            "region": "ap-south-1",
+            "usage_type": "GB-egress",
+            "usage_quantity": 1500,
+            "unit": "GB",
+            "cost_inr": 900,
+            "desc": "Network egress"
+        },
+        {
+            "month": "2025-01",
+            "service": "Monitoring",
+            "resource_id": "ai-community-monitoring-02",
+            "region": "ap-south-1",
+            "usage_type": "Metric data",
+            "usage_quantity": 20000,
+            "unit": "count",
+            "cost_inr": 1000,
+            "desc": "Monitoring metrics"
+        },
+        {
+            "month": "2025-01",
+            "service": "Cache",
+            "resource_id": "ai-community-cache-02",
+            "region": "ap-south-1",
+            "usage_type": "Read requests",
+            "usage_quantity": 75000,
+            "unit": "count",
+            "cost_inr": 375,
+            "desc": "Cache read requests"
+        },
+        {
+            "month": "2025-01",
+            "service": "LoadBalancer",
+            "resource_id": "ai-community-loadbalancer-02",
+            "region": "ap-south-1",
+            "usage_type": "requests",
+            "usage_quantity": 15000,
+            "unit": "requests",
+            "cost_inr": 1500,
+            "desc": "Load balancer requests"
+        },
+        {
+            "month": "2025-01",
+            "service": "Backup",
+            "resource_id": "ai-community-backup-02",
+            "region": "ap-south-1",
+            "usage_type": "Storage",
+            "usage_quantity": 30,
+            "unit": "GB-month",
+            "cost_inr": 180,
+            "desc": "Backup storage"
+        }
+    ],
+    "billing_summary": {
+        "budget_inr": 40000,
+        "total_cost_inr": 10275,
+        "percent_of_budget": 101.4,
+        "top_3_services_by_cost": [
+            "Compute",
+            "Database",
+            "Networking"
+        ]
+    }
+}
